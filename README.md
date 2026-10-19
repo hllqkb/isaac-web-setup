@@ -5,10 +5,10 @@
   - 3 个全成就存档：成就 641/641、角色全开、挑战全开、
     Eden 代币 99999、捐款机和贪婪捐款机各 888
   - 游戏设置：已开启控制台（按 ` 键，英文输入法下按住半秒）；
-    关闭了游戏自带的英文道具说明框，改看 EID 的中文
-  - 40 个 mod（清单见最后）
+    渲染倍数 1（更流畅，画面略糊）；关闭了游戏自带的英文道具说明框，改看 EID 的中文
+  - 35 个 mod（清单见最后），按网页版的性能挑过
   - EID 道具说明：简体中文，并做了降耗（刷新率 10、战斗中自动隐藏）
-  - 修补了 Angels Drop Items：原版会让网页版在「水层/矿层秘密出口」房间崩溃
+  - GoodTrip（Tab+鼠标点小地图传送）已按 HUD 偏移校准，点得准
 
 注意：导入会覆盖你浏览器里原有的以撒存档，并清掉未打完的对局。
 网页版运行的是游戏原版内容，建议自己也拥有正版《以撒的结合：忏悔》。
@@ -23,7 +23,8 @@
    - Chrome 第一次粘贴会提示不允许粘贴，按提示输入 allow pasting 回车后再粘贴。
    - 这是正常的安全提醒：只运行你信任的人给的代码。脚本是明文，可以先看看内容。
 4. 弹窗点「确定」，等它跑完（要下载 mod，约 1-2 分钟），最后会弹出「完成」。
-   已经跑过旧版脚本的人也可以再跑一次：装过的 mod 会跳过，只补上修补和新设置。
+   已经跑过旧版脚本的人也可以再跑一次：装过的 mod 会跳过，
+   并会关掉这版不再推荐的 mod、补上修补和新设置。
 5. 打开 https://chiikabu.github.io/the-browsing-of-isaac/?touch=0 开始玩
    （?touch=0 防止网页误判成手机、出现虚拟摇杆）。
 
@@ -32,8 +33,7 @@
 1. 打开 https://chiikabu.github.io/the-browsing-of-isaac/?saves=1
 2. 右上角点 Saves → Import…，选 [isaac-saves-backup.zip](isaac-saves-backup.zip)，再点 Reload to apply。
 3. 进游戏后，在主菜单 MODS → MOD BROWSER（按 B），按下面的清单逐个搜索安装。
-4. 这种方式不会修补 Angels Drop Items：要么别装它，要么进秘密出口会崩。
-   EID 默认也是英文。建议用方式一。
+4. 这种方式 EID 是英文、GoodTrip 点小地图会偏。建议用方式一。
 
 
 ## Mac 用户可选：Command 和 Control 互换
@@ -45,28 +45,25 @@
 ## 常见问题
 - 导入后没生效：多半是导入时游戏页面还开着，退出时把旧存档写回去了。
   关掉所有游戏页面，重新导入一次。
-- 进游戏一开始就崩、报 _invalid_parameter：是某个存档位里有「mod 组合不一样」的
+- 进游戏一开始就崩、报 _invalid_parameter：某个存档位里有「mod 组合不一样」的
   未打完对局。重新跑一次方式一的脚本会自动清掉。
-- 水层/矿层秘密出口崩溃：没修补 Angels Drop Items，跑一次方式一的脚本。
+- 水层/矿层秘密出口崩溃：是 Angels Drop Items 这个 mod 的 bug，本包已不再安装它；
+  旧版装过的，脚本会把它关掉并修补。
 - 走不动：多半是中文输入法吃掉了 WASD，切到英文输入法。
-- 掉帧：网页版里 EID 显示中文和火堆光照最吃性能，按 F2 可临时隐藏 EID。
+- 掉帧：火堆、水面多的房间是网页版模拟光照的开销，把浏览器窗口缩小一点（不全屏）有帮助；
+  按 F2 可临时隐藏 EID。游戏本身上限 60 帧（逻辑每秒 30 次），显示 60 就是满帧。
 
 
-## mod 清单（40 个）
+## mod 清单（35 个）
   - Door Overhaul
-  - Angels Drop Items（已修补）
-  - AntiCrash - less crashes!
   - Better Wizoobs!
   - Visible Options!
-  - Completion Marks for ALL Modded Characters[Rep/Rep+]
   - Cooler Completion Marks [REP+]
   - Deal Visual Change
   - drop trinkets faster
   - Enhanced Boss Bars
   - External item descriptions
-  - Extra animated portraits
   - GoodTrip
-  - Big, poofy hair [WIP]
   - Hush Now Drops Eden's Blessing
   - Instant Fires and Poops
   - Instant Restart
